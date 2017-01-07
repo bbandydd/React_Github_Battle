@@ -38,7 +38,7 @@ module.exports = function(options){
                 { test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: "url-loader" },
                 { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: "url-loader" },
                 { test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: "url-loader" },
-                { test: /\.(js|jsx)$/, loader: 'babel', include: path.join(__dirname, 'app/src'),  query:{presets:['es2015','react','stage-0'], "plugins": [["transform-decorators-legacy"]]}}
+                { test: /\.(js|jsx)$/, loader: ['babel'], include: path.join(__dirname, 'app/src'),  query:{presets:['es2015','react','stage-0'], "plugins": [["transform-decorators-legacy"]]}}
             );
 
             break;
