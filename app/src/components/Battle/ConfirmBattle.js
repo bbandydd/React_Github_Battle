@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Battle from './Battle';
-import Loading from './Loading';
+import Loading from '../Loading';
 import githubHelper from '../../utils/githubHelper';
 
 export default class ConfirmBattle extends Component {
@@ -39,16 +39,17 @@ export default class ConfirmBattle extends Component {
 
     render() {
         const { isLoading, playersInfo } = this.state;
-        const content = isLoading 
-            ? <Loading /> 
-            : <Battle 
-                playersInfo={playersInfo} 
-                onInitialBattle={this.onInitialBattle.bind(this)}
-            />;
 
         return (
             <div>
-                {content}
+                {
+                    isLoading 
+                        ? <Loading /> 
+                        : <Battle 
+                            playersInfo={playersInfo} 
+                            onInitialBattle={this.onInitialBattle.bind(this)}
+                        />
+                }
             </div>
         )
     }

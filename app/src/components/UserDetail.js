@@ -7,10 +7,11 @@ const styles = {
     }
 }
 
-const UserDetail = ({ header, user }) => (
+const UserDetail = ({ header, user, score }) => (
     <div className="col-sm-6">
         <p className="lead">{header}</p>
         <li className="list-group-item">
+            {score && <li className="list-group-item"><h3>Score: {score}</h3></li>}
             <img src={user.avatar_url} className="img-rounded img-responsive" style={styles.photo}/>
             {user.name && <li className="list-group-item">Name: {user.name}</li>}
             <li className="list-group-item">Username: {user.login}</li>
