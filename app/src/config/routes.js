@@ -1,6 +1,6 @@
 import React from 'react';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
-import { App, Home, Player, Battle } from '../components';
+import { App, Home, Player, ConfirmBattle } from '../components';
 
 const routes = (
     <Router history={browserHistory}>
@@ -8,7 +8,7 @@ const routes = (
             <IndexRoute component={Home} />
             <Route path="playerOne" header="Player One" component={Player} />
             <Route path="playerTwo/:playerOne" header="Player Two" component={Player} />
-            <Route path="battle" component={Battle} />
+            <Route path="battle" component={ConfirmBattle} />
         </Route>
     </Router>
 );

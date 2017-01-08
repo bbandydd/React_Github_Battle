@@ -43,7 +43,7 @@ class Player extends Component {
         const { router, routeParams } = this.props;
 
         this.setState({userName: ''});
-        debugger
+
         routeParams.playerOne 
         ? router.push({
             pathname: '/battle',
